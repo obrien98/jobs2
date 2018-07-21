@@ -1,0 +1,44 @@
+{%  extends 'core/base.html' %}
+
+{% block head %}
+    <title> Login</title>
+{% endblock %}
+
+{%  block body %}
+    <div class = "container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mt-4">
+                    <div class="card-block">
+                        <h2 class="card-title text-center mt-4">Register</h2>
+                        {% load crispy_forms_tags %}
+                        <form class = "w-50 mx-auto " method="post">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <button class = "btn btn-primary" type="submit">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card mt-4">
+                    <div class="card-block">
+                        <h2 class = "card-title text-center pt-4">Login</h2>
+                        {% load crispy_forms_tags %}
+                        <form class="mx-auto" method = 'post'>
+                            {% csrf_token %}
+                            <input name="username" class="form-control mr-sm-2 mt-4 mb-4" type="text">
+                            <input name="password" class="form-control mr-sm-2" type="password">
+                            <div class = "text-center">
+                                <br/>
+                                <button class="btn btn-primary" type = 'submit'>Login</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

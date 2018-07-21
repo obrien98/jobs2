@@ -1,0 +1,119 @@
+
+*{box-sizing: border-box;}
+
+body{  font: 1.2em Helvetica, arial, sans-serif;
+    background-color: white;
+}
+
+
+
+ /* search bar and button: */
+#job_search_form {
+    margin: 50px auto 0px auto;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+}
+#grid_form_items{
+    display: grid;
+    grid-template-columns: 3fr 1fr ;
+    grid-column-gap: 20px;
+}
+.search_bar{   /*modify bootstrap class*/
+    padding: 12px;
+    font-size: 1em;
+    border:1px solid #0074D9;
+    border-radius:4px;
+}
+
+.search_btn  /*modify bootstrap class*/{
+   padding: 12px;
+    font-size: 1em;
+    border: 1px solid #0074D9;
+    color: #0074D9;
+
+
+
+}
+.search_bar, .search_btn /*modify bootstrap classes*/ {
+    border: 1px solid #2f2fa2;
+}
+
+
+
+
+ /*job results and email subscription grid: */
+.grid{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 15px;
+    margin: 30px 50px 0px 50px;
+
+
+}
+#item1{
+    margin-left: 15px;
+    padding: 20px 20px 20px 40px;
+    height: 500px;
+    overflow: scroll;
+
+}
+
+}
+#item1>h1{
+     text-align:center;
+}
+#item1>h2{
+    text-align: center;
+    padding-top: 20px;
+}
+#results{
+    font-style: italic;
+    color: grey;
+    text-align: right;
+}
+
+#item2{
+    text-align: center;
+    margin-right: 15px;
+    align-self: start;
+
+    padding: 15px 7px 0px 7px;
+
+
+}
+
+#item1, #item2{
+    border: 2px solid #eeeeee;
+    border-radius: 1px;
+    background-color: white;
+    margin: 10px;
+
+}
+
+
+ /* nested job grid and job items*/
+.job_results_nested_grid{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.job{
+    border-bottom: 1px solid #eeeeee;
+    padding: 15px 0px;
+}
+
+.job_link{
+    color: #2f2fa2 !important;
+}
+a:link, a:visited {
+     text-decoration: none;
+ }
+
+
+.job_description{
+display: none;
+}
+.job_address{
+    color:
+}

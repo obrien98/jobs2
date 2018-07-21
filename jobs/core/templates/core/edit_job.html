@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'core/css/edit_job.css' %}" />
+
+{% endblock %}
+
+{% block body %}
+    <h1 class="text-center display-4 mt-4">Edit Job Posting</h1>
+    {% load crispy_forms_tags %}
+    <form class = "w-50 mx-auto" action="" method="post">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <div class="text-center">
+            <button class="btn btn-primary mt-2 mb-4" type="submit">Update Job</button>
+        </div>
+    </form>
+
+{% endblock %}

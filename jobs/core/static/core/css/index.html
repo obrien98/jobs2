@@ -1,0 +1,58 @@
+
+ *{box-sizing: border-box;}
+    img {max-width: 100%; display: block;}
+    body {
+        font: 1.2em Helvetica, arial, sans-serif;
+    }
+    a:link, a:visited {
+      text-decoration: none;
+      color: blue;
+    }
+
+    h2 {
+      background-color: #157EFB;
+      color: white;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      font-size: 1.3em;
+    }
+
+.job_listings li {
+  border: 1px solid #ffe066;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.job_listings .cta {
+  margin-top: auto;
+  border-top: 1px solid #ffe066;
+  padding: 10px;
+  text-align: center;
+}
+.job_listings .body {
+  padding: 20px;
+}
+.job_listings {
+  list-style: none;
+  margin: 2em;
+  display: grid;
+  grid-gap: 50px;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(3,minmax(300px, 1fr));
+}
+.job_listings .wide {
+  grid-column-end: span 2;
+}
+
+.jumbotron{
+    text-align: center;
+}
+.learn_more_buttons{
+    color: white !important;
+    width: 300px;  /* have to add media quieres for this*/
+}
+
+h1{
+    text-align: center;
+}

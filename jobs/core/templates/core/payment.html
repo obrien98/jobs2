@@ -1,0 +1,13 @@
+{% extends 'core/base.html' %}
+<form action="{% url 'payment' %}" method="POST">
+    {% csrf_token %}
+  <script
+    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="pk_test_z1bxF7Bk4Rk9PZuBFHMrYZnj"
+    data-amount="999"
+    data-name="Demo Site"
+    data-description="Example charge"
+    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+    data-locale="auto">
+  </script>
+</form>

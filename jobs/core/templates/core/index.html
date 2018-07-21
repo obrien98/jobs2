@@ -1,0 +1,68 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block head %}
+
+    <link rel="stylesheet" href="{% static 'core/css/index.css' %}" />
+    <link rel="stylesheet" href="{% static 'core/css/jumbotron.css' %}" />
+
+    <!--bootstrap cdn-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
+
+    <!--font awesome cdn-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+{% endblock %}
+
+{% block body %}
+
+    <div class="jumbotron">
+        <h2 id="find_a_job_h2">Find a Job</h2>
+        <!--Search Bar-->
+        <form class="form-inline justify-content-center" method = "GET" action = "{% url 'search' %}" >
+            <div id = "form_grid">
+                <input  class="search_bar" style="background-image: url({% static 'magnifying-glass-2x.png' %});"  class="form-control mr-sm-2" name="query"  type="text" placeholder="Zip Code">
+                <button class="search_btn btn btn-outline-success  my-2 my-sm-0" type="submit">Search</button>
+            </div>
+
+        </form>
+        
+        <hr class="my-4">
+    </div> <!--close jumbotron-->
+
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12"><h2 id="how_teen_jobs_works_for_you" class="lead">How TeenJobs Works for You</h2></div>
+            </div>
+            <div id="information" class="row">
+
+                <div class="col-sm-2"></div>
+
+                <div class="col-sm-3">
+                    <span class="fas fa-money-bill-alt fa-2x"></span>
+                    <h4 class="lead">Job Seekers</h4>
+                    <p class="lead">No need to go door to door from place after place looking for a minimum wage opening. All
+                    of the openings near you can be found on TeenJobs</p>
+                </div>
+
+                <div class="col-sm-2">
+
+                </div>
+
+                <div class="col-sm-3">
+                    <span class="fas fa-store fa-2x"></span>
+                    <h4 class="lead">Small Business Owners</h4>
+                    <p class="lead">Gone are the days of hoping someone sees your help wanted sign and stops by. Fees are
+                        blasephmeous on most job boards. Post a job
+                    opening for just $9.99 and find employees (most likely local school kids) instantly</p>
+                </div>
+                <div class="col-sm-2"></div>
+            </div> <!-- end row-->
+        </div><!-- end container-->
+
+
+
+
+
+{% endblock %}

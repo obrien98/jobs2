@@ -1,0 +1,13 @@
+.jumbotron{  text-align: center;
+    background-color: white !important;
+    margin-bottom: 0px;
+}
+#jumbotron_p{
+    color: white;
+}
+
+#find_a_job_h2{
+    color: #0074D9;
+    margin-bottom: 20px;
+    text-align: center;
+}

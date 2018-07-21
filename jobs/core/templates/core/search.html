@@ -1,0 +1,69 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block head %}
+    <link rel="stylesheet" href="{% static 'core/css/search.css' %}" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+	$(document).ready(function(){
+		$(".job_link").click(function(){
+		    $(".job_description").hide();
+            $(this).parents('.job').find(".job_description").show();
+		});
+	});
+
+</script>
+
+{% endblock %}
+
+{% block body %}
+        <!--<form class="form-inline justify-content-center" method = "GET" action = "{% url 'search' %}" >
+            <div id = "form_grid">
+                <input class="search_bar"style="background-image: url({% static 'magnifying-glass-2x.png' %});"  class="form-control mr-sm-2" name="query"  type="text" placeholder="Zip Code">
+                <button class="search_btn btn btn-outline-success  my-2 my-sm-0" type="submit">Find Jobs</button>
+            </div>
+        </form>-->
+    <form id="job_search_form" method = "GET" action = "{% url 'search' %}" >
+            <div id = "grid_form_items">
+                <input  class="search_bar"  name="query"  type="text" placeholder="Zip Code">
+                <button  class="search_btn btn btn-outline-success  " type="submit">Find Jobs</button>
+            </div>
+    </form>
+
+
+
+
+
+        <div class="grid">
+            <div id="item1">
+            <h6 id="results">Results: {{ number_of_results }}</h6>
+                <div class="job_results_nested_grid">
+                    {% for job in jobs_matching_query %}
+                        <div class="job">
+                            <h2><a class="job_link" href="#">{{ job.job_title}}</a></h2>
+                            <p class="job_address lead">{{ job.establishment_name }} - {{ job.address }}</p>
+                            <div class="job_description">
+                                <p>{{ job.details }}</p>
+                                <p>Call: {{ job.contact_number }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div id="item2">
+                <form method = "get" action = "{% url 'email_subscription' %}">
+                    {% csrf_token %}
+                    <p>Subscribe to recieve job alerts near {{ query }}:</p> <!-- query stores zip code-->
+                      <input type="hidden" value="{{ query }}" name="zip_code">
+                    <input type="text" name= "email" placeholder="Email">
+                    <button class="btn" type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div><!-- close grid div  url 'job_info' job_id=job.id %}-->
+
+
+
+
+
+{% endblock %}

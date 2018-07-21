@@ -1,0 +1,46 @@
+
+h1{
+    text-align: center;
+    margin-top: 80px;
+    border-bottom: 3px solid #eeeeee;
+    padding-bottom:10px;
+}
+
+#container{
+    margin-top: 30px;
+    padding: 0px 3em;
+}
+
+#container > p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#testimonials_header{
+
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+
+    margin-bottom: 20px;
+}
+
+.testimonials{
+    list-style: none;
+
+    width: 100%;
+    margin: auto;
+
+    background-color: #eee;
+
+    font-size: 1em;
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+
+
+    border: 1px solid black;
+    border-radius: 25px;
+
+    margin-bottom: 30px;
+    padding: 10px 40px;
+}
+
